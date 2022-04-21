@@ -42,5 +42,17 @@ public class LinkList {
             return true;
     }
     //6.尾部增加节点
-
+    public void addAtTail(int x){
+        Node n= new Node(x);
+        Node p = head;
+        if(head == null){
+            head = n;
+            return;
+        }
+        //末尾节点,next==null
+        while (p.getNext()!=null){
+            p=p.getNext();
+        }
+        p.setNext(n);
+    }
 }
