@@ -28,5 +28,19 @@ public class LinkList {
         }
         return count;
     }
+    //5.查找指定节点
+    public boolean search(int x) {
+        Node p = head;
+        while (p != null) {
+            if (p.getV() == x)
+                break;
+            p = p.getNext();
+        }
+        if(p==null)
+            return false;
+        else
+            return true;
+    }
+    //6.尾部增加节点
 
 }
