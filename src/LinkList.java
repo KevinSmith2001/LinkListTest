@@ -11,4 +11,9 @@ public class LinkList {
         n.setNext(head);
         head = n;
     }
+    public void removeAtHeader(){
+        if(head!= null)
+            head= head.getNext();
+    }
+
 }
