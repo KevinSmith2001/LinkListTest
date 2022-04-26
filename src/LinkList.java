@@ -75,4 +75,20 @@ public class LinkList {
             return true;
         }
     }
+    //8.按升序插入值为X的节点
+    public void insert(int X){
+        //查找值为X的节点是否存在,如果存在,记录节点的上一个节点的位置
+       Node p = head;
+       Node q = null; //当前节点的上一个节点引用
+       while (p!=null){
+           if(p.getV()>X)
+               break;
+           q=p;
+           p=p.getNext();
+       }
+       if(p==null){
+       }else{
+
+       }
+    }
 }
