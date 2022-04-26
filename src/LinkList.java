@@ -55,4 +55,23 @@ public class LinkList {
         }
         p.setNext(n);
     }
+    //7.删除指定节点X,删除成功返回true,失败返回false
+    public void remove(int X){
+        //查找值为X的节点是否存在,如果存在,记录节点的上一个节点的位置
+        Node p = head;
+        Node q = null; //当前节点的上一个节点引用
+        while(p!=null){
+            if(p.getV()==X)
+                break;
+            q=p;
+            p=p.getNext();
+        }
+        if(p==null){
+            //遍历完了所有节点,没有查到X
+            return;
+        }else{
+            //p就是指向X的节点,q就是p前一个节点
+            q.setNext(p.getNext());
+        }
+    }
 }
